@@ -1,0 +1,8 @@
+{
+  "name": "WordPress Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "wordpress",
+  "workspaceFolder": "/var/www/html",
+  "forwardPorts": [80],
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}

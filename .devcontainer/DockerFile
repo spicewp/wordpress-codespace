@@ -1,0 +1,10 @@
+FROM wordpress:php8.0-apache
+
+# Enable Apache modules (for permalinks)
+RUN a2enmod rewrite
+
+# Update and install basic tools (optional)
+RUN apt-get update && apt-get install -y \
+    nano \
+    git \
+    && rm -rf /var/lib/apt/lists/*
